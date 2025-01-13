@@ -170,11 +170,11 @@ class ProjectAgent:
         torch.save(self.policy_net.state_dict(), path)
 
     def load(self):
-        self.model.load_state_dict(torch.load(f"{os.getcwd()}/" + self.model_name + '.pth'))
+        self.model.load_state_dict(torch.load(f"{os.getcwd()}/" + 'dqn.pth'))
         self.model.eval()
 
     
 if __name__ == "__main__":
     agent = ProjectAgent()
     agent.train(env)
-    agent.save('dqn
+    agent.save('dqn.pth')
