@@ -58,7 +58,7 @@ class ProjectAgent:
         self.eps0 = 1
         self.epsinf = 0.005
         self.epsdecay = 0.9999
-        self.hidden_size = 128
+        self.hidden_size = 256
         self.depth = 5
         self.policy_net = DQN(env, self.hidden_size, self.depth).to(self.device)
         self.target_net = DQN(env, self.hidden_size, self.depth).to(self.device)
