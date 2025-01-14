@@ -170,7 +170,7 @@ class ProjectAgent:
         torch.save(self.policy_net.state_dict(), path)
 
     def load(self):
-        self.policy_net.load_state_dict(torch.load(f"{os.getcwd()}/" + 'dqn.pth'))
+        self.policy_net.load_state_dict(torch.load(f"{os.getcwd()}/" + 'dqn.pth', map_location=torch.device('cpu')))
         self.policy_net.eval()
 
     
