@@ -49,7 +49,7 @@ class DQN(nn.Module):
 class ProjectAgent:
     def __init__(self, config=None):
 
-        self.max_episode = 1000
+        self.max_episode = 20000
         self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
         self.gamma = 0.9
         self.batch_size = 128
