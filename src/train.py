@@ -170,8 +170,8 @@ class ProjectAgent:
         torch.save(self.policy_net.state_dict(), path)
 
     def load(self):
-        self.model.load_state_dict(torch.load(f"{os.getcwd()}/" + 'dqn.pth'))
-        self.model.eval()
+        self.policy_net.load_state_dict(torch.load(f"{os.getcwd()}/" + 'dqn.pth'))
+        self.policy_net.eval()
 
     
 if __name__ == "__main__":
