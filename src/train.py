@@ -69,7 +69,7 @@ class ProjectAgent:
         self.update_target_every = 1
         self.update_tau = 1
 
-        self.save_every=100
+        self.save_every=20
 
         self.eps=1
         
