@@ -138,8 +138,8 @@ class ProjectAgent:
                 
                 state = next_state
 
-            for _ in range(self.gd_steps): 
-                loss = self.gradient_step()
+                for _ in range(self.gd_steps): 
+                    loss = self.gradient_step()
                 
             if loss != 'NA':
                 episode_losses.append(loss)
